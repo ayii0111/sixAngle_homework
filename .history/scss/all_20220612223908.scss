@@ -1,7 +1,7 @@
 $primary: #FF5D50;
 $secondary: #56C4C5;
 
-@import "../../../jsCode/bootstrap-5.1.1/scss/bootstrap.scss";
+@import "../../../jsCode/bootstrap-5.1.1/";
 
 // 按鈕預設文字都黑色，改成白色
 .btn {
@@ -18,12 +18,10 @@ $secondary: #56C4C5;
   outline: 3px solid #D8B4E2;
 }
 
-.row {
+.row{
   margin: 0;
-
   &>* {
-    padding: 0;
-  }
+  padding: 0;}
 }
 
 p {
@@ -368,7 +366,7 @@ header {
       top: 0;
     }
 
-    &>div>div img {
+    &>div>div img{
       width: 16px;
       height: 16px;
     }
