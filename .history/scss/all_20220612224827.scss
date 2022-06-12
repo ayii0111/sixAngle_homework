@@ -1,0 +1,382 @@
+$primary: #FF5D50;
+$secondary: #56C4C5;
+
+@import "../../../jsCode/bootstrap-5.1.1/scss/bootstrap.scss";
+
+// 按鈕預設文字都黑色，改成白色
+.btn {
+  display: block;
+  color: #fff;
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+
+* {
+  // outline: 3px solid #D8B4E2;
+}
+
+.row {
+  margin: 0;
+
+  &>* {
+    padding: 0;
+  }
+}
+
+p {
+  margin: 0;
+}
+
+
+
+// 從 bootstrap 的 container 抄來的，媒體查詢由小到大，代表裝置愈大，覆蓋愈多次
+// 若視寬由大到小變動，覆蓋由多變少
+body::before {
+  content: '（xs）';
+
+  @media (min-width: 576px) {
+    content: 'min-width: 576px (sm)';
+  }
+
+  @media (min-width: 768px) {
+    content: 'min-width: 768px（md）';
+  }
+
+  @media (min-width: 992px) {
+    content: 'min-width: 992px（lg）';
+  }
+
+  @media (min-width: 1200px) {
+    content: 'min-width: 1200px（xl）';
+  }
+
+  @media (min-width: 1400px) {
+    content: 'min-width: 1400px（xxl）';
+  }
+
+  position: fixed;
+  left: 0;
+  color: #0bd;
+  font-weight: bold;
+}
+
+
+img {
+  // 讓圖像可以伸縮到父元素的寬度，通常父元素都會設定 max-width 屬性來限制圖像最大寬
+  width: 100%;
+}
+
+.container {
+  @media (min-width: 768px) {
+    max-width: 830px;
+  }
+
+  @media (min-width: 1400px) {
+    // box 寬是content寬 1088 + .container 內距 12*2
+    max-width: 1109px;
+  }
+}
+
+body {
+  &>img {
+    position: absolute;
+    right: 0;
+    z-index: -1;
+    width: 62.25%;
+
+    @media (max-width: 992px) {
+      top: 359px;
+      right: 8%;
+      width: 85%;
+
+    }
+
+  }
+}
+
+header {
+  height: 88px;
+  margin-bottom: 30px;
+
+  &>img {
+    // 需直接設定 max-width 或 width，因為 img 元素的水平方向並未直接被父元素包裹，無法使用 max-width 的方式
+    max-width: 218.06px;
+
+    height: 40px;
+  }
+
+  &>a.btn {
+    display: block;
+    width: 128px;
+
+
+    /* 記得用 padding 來拉內距時，要扣掉寬高 */
+    padding: 7px 31px;
+
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.container1 {
+  &>div>img {
+    height: 543px;
+    margin-bottom: 217px;
+  }
+
+  p {
+    text-align: start;
+
+    &:nth-child(1) {
+      color: #56C4C5;
+    }
+
+    &:nth-child(2) {
+      font-size: 48px;
+      line-height: 70px;
+      font-weight: bold;
+    }
+
+    &:nth-child(3) {
+      font-size: 20px;
+      line-height: 29px;
+    }
+  }
+}
+
+.container2 {
+  max-width: 969px;
+  height: 618px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 60px;
+
+  @media (min-width: 768px) {
+    height: 315px;
+    margin-bottom: 100px;
+  }
+
+
+  &>p {
+    font-size: 32px;
+    font-weight: bold
+  }
+
+  &>div {
+    max-width: 969px;
+    height: 546px;
+  }
+
+  img {
+    max-width: 90px;
+  }
+}
+
+.Social_platforms {
+  width: 244px;
+  height: 166px;
+
+  @media (min-width: 768px) {
+    height: 221px;
+  }
+
+  &>div:nth-child(2) {
+    font-size: 18px;
+
+    @media (min-width: 768px) {
+      font-size: 24px;
+    }
+  }
+
+  &>div:nth-child(3) {
+    font-size: 16px;
+    color: #747474;
+  }
+}
+
+
+.container3 {
+  max-width: 1088px;
+  margin-bottom: 100px;
+  height: 1764px;
+
+  @media (min-width: 768px) {
+    height: 527px;
+  }
+
+  .card {
+    max-width: 260px;
+    font-size: 16px;
+  }
+
+  .card-title {
+    color: #56C4C5;
+  }
+
+  .row {
+    height: 1624px;
+    margin: 0;
+
+    @media (min-width: 768px) {
+      max-width: 1088px;
+    }
+  }
+
+  &>p:nth-child(1) {
+    font-size: 32px;
+    font-weight: bold;
+  }
+
+  &>p:nth-child(2) {
+    margin: 16px 0 32px;
+
+    @media (min-width: 768px) {
+      margin-bottom: 48px;
+    }
+  }
+}
+
+.container4 {
+  max-width: 1039px;
+
+  height: auto;
+
+  @media (min-width: 768px) {
+    height: 588px;
+  }
+
+  margin-bottom: 36px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 100px;
+  }
+
+  img {
+    width: 52px;
+    height: 52px;
+  }
+
+  // 左邊卡片區塊
+  &>div:nth-child(1) {
+    width: 507px;
+    font-size: 16px;
+
+    // 卡片區塊裡的左邊區塊或右邊
+    &>div {
+
+      // 個別卡片區塊
+      &>div {
+
+        margin: 0 0 24px 0;
+
+        @media (min-width: 768px) {
+          margin: 0;
+        }
+
+        padding: 32px 12px 48px;
+
+        @media (min-width:1400px) {
+          padding-left: 32px;
+          padding-right: 32px;
+        }
+
+        width: 230px;
+        height: 280px;
+        box-shadow: 0px 2px 10px #00000014;
+        border-radius: 12px;
+        opacity: 1;
+
+        // 圖像外框
+        &>div {
+          width: 86px;
+          height: 86px;
+          box-shadow: 0px 2px 10px #00000014;
+          opacity: 1;
+          padding: 17px 0 0 19px;
+        }
+
+        // 用中間的段落區塊，推上下間距
+        &>p:nth-child(2) {
+          margin: 24px 0 16px;
+          font-size: 18px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  // 右邊的段落區塊
+  &>div:nth-child(2) {
+    margin: 16px 0 32px 30px;
+
+    @media (min-width: 768px) {
+      margin: 16px 0 24px 30px;
+    }
+
+    width: 444px;
+
+    p:nth-child(1) {
+      font-size: 32px;
+    }
+
+    p:nth-child(2) {
+      font-size: 18px;
+      margin: 16px 0 24px;
+    }
+  }
+
+  a {
+    width: 136px;
+    height: 49px;
+    font-size: 18px;
+    background-color: #56C4C5;
+  }
+}
+
+.container5 {
+  font-size: 16px;
+
+
+  .col {
+    position: relative;
+    max-width: 352px;
+    height: 304px;
+    display: flex;
+    align-items: flex-end;
+
+
+
+    &>div {
+      padding: 48px auto 24px;
+    }
+
+    p {
+      padding-bottom: 24px;
+      border-bottom: 1px solid gray;
+      padding-bottom: 24px;
+    }
+
+    &>img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      position: absolute;
+      left: 32px;
+      top: 0;
+    }
+
+    &>div>div img {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  &>p {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 48px;
+  }
+}
