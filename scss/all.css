@@ -59,6 +59,7 @@
   --bs-body-bg: #fff;
 }
 
+
 *,
 *::before,
 *::after {
@@ -339,6 +340,7 @@ label {
 button {
   border-radius: 0;
 }
+
 button:focus:not(:focus-visible) {
   outline: 0;
 }
@@ -12255,7 +12257,7 @@ header > a.btn {
 
 .container4 > div:nth-child(2) {
   margin: 16px 0 32px 30px;
-  width: 444px;
+  max-width: 444px;
 }
 
 @media (min-width: 768px) {
